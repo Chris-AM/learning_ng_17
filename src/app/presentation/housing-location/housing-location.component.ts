@@ -1,4 +1,5 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
+import { HousingLocation } from '../../domain/interfaces/housing-location';
 
 @Component({
   selector: 'app-housing-location',
@@ -8,4 +9,6 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   templateUrl: './housing-location.component.html',
   styleUrl: './housing-location.component.css',
 })
-export class HousingLocationComponent {}
+export class HousingLocationComponent {
+  @Input() public housingLocation!: HousingLocation;
+}

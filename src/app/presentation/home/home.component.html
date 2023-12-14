@@ -5,5 +5,7 @@
   </form>
 </section>
 <section class="results">
-  <app-housing-location />
+  @for(house of houses(); track house.id){
+    <app-housing-location [housingLocation]="house" />
+  }
 </section>
