@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, OnInit, inject, signal } from '@angular/core';
-import { HousingLocationComponent } from '../housing-location/housing-location.component';
+import { HousingLocationComponent } from './housing-location/housing-location.component';
 import { HomeService } from '../../use_cases/home.service';
 import { HousingLocation } from '../../domain/interfaces/housing-location';
 

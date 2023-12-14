@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
-import { HousingLocation } from '../../domain/interfaces/housing-location';
+import { HousingLocation } from '../../../domain/interfaces/housing-location';
 
 @Component({
   selector: 'app-housing-location',
