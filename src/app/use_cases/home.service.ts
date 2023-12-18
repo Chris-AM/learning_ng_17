@@ -13,4 +13,8 @@ export class HomeService {
   getHouses(): Observable<HousingLocation[]> {
     return this.datasource.getHouses();
   }
+
+  getHouse(id: number): Observable<HousingLocation> {
+    return this.datasource.getHouse(id);
+  }
 }
