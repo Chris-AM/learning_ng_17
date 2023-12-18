@@ -2,7 +2,7 @@ import { Observable } from 'rxjs';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { HousesDataSource } from '../../domain/datasource/houses.datasource';
-import { HousingLocation } from '../../domain/interfaces/housing-location';
+import { HousingLocation, IApplicationResponse, ISubmitApplication } from '../../domain/interfaces/interfaces';
 import { environment } from '../../config/app.environment';
 
 @Injectable({
@@ -22,6 +22,11 @@ export class HousesDataSourceImpl extends HousesDataSource {
 
   override getHouse(id: number): Observable<HousingLocation> {
     const petition = this.httpClient.get<HousingLocation>(`${this.baseUrl}locations/${id}`);
+    return petition;
+  }
+
+  override submitApplication(userData: ISubmitApplication): Observable<IApplicationResponse> {
+    const petition = this.httpClient.post<IApplicationResponse>(`${this.baseUrl}applications`, userData);
     return petition;
   }
 }

@@ -100,5 +100,9 @@
       "wifi": true,
       "laundry": true
     }
-  ]
+  ],
+  "applications": {
+    "status": "success",
+    "message": "Application retrieved successfully"
+  }
 }
