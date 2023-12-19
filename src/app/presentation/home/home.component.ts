@@ -2,18 +2,19 @@ import { ChangeDetectionStrategy, Component, OnInit, inject, signal } from '@ang
 import { HousingLocationComponent } from './housing-location/housing-location.component';
 import { HomeService } from '../../use_cases/home.service';
 import { HousingLocation } from '../../domain/interfaces/housing-location';
+import { SearchBarComponent } from './search-bar/search-bar.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [HousingLocationComponent],
+  imports: [HousingLocationComponent, SearchBarComponent],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css'],
 })
 export class HomeComponent implements OnInit {
   public houses = signal<HousingLocation[]>([]);
-  
+
   private housesService = inject(HomeService);
 
   ngOnInit(): void {

@@ -1,11 +1,8 @@
 <section>
-  <form>
-    <input type="text" placeholder="Filter by city" />
-    <button class="primary" type="button">Search</button>
-  </form>
+  <app-search-bar [filteredLocationList]="houses()" />
 </section>
 <section class="results">
   @for(house of houses(); track house.id){
-    <app-housing-location [housingLocation]="house" />
+  <app-housing-location [housingLocation]="house" />
   }
 </section>
