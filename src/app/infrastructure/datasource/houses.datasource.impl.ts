@@ -26,7 +26,7 @@ export class HousesDataSourceImpl extends HousesDataSource {
   }
 
   override submitApplication(userData: ISubmitApplication): Observable<IApplicationResponse> {
-    const petition = this.httpClient.post<IApplicationResponse>(`${this.baseUrl}applications`, userData);
+    const petition = this.httpClient.get<IApplicationResponse>(`${this.baseUrl}applications`);
     return petition;
   }
 }
