@@ -102,7 +102,7 @@
     }
   ],
   "applications": {
-    "status": "success",
-    "message": "Application retrieved successfully"
+    "status": "approved",
+    "message": "Your application has been approved."
   }
 }
