@@ -20,6 +20,10 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
     this.getHouses();
   }
+  
+  public handleSearchResults(houses: HousingLocation[]): void {
+    this.houses.set(houses);
+  }
 
   public getHouses(): void {
     this.housesService.getHouses().subscribe({

@@ -1,5 +1,8 @@
 <section>
-  <app-search-bar [filteredLocationList]="houses()" />
+  <app-search-bar
+    [filteredLocationList]="houses()"
+    (searchResults)="handleSearchResults($event)"
+  />
 </section>
 <section class="results">
   @for(house of houses(); track house.id){
