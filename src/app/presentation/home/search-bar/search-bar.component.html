@@ -1,0 +1,11 @@
+<form
+  [formGroup]="searchForm"
+  (submit)="filterLocations(searchForm.value.searchTerm)"
+>
+  <input
+    formControlName="searchTerm"
+    type="text"
+    placeholder="Filter by city"
+  />
+  <button class="primary" type="submit">Search</button>
+</form>
