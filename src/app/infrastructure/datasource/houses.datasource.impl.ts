@@ -29,4 +29,9 @@ export class HousesDataSourceImpl extends HousesDataSource {
     const petition = this.httpClient.get<IApplicationResponse>(`${this.baseUrl}applications`);
     return petition;
   }
+
+  override getHousesByCity(city: string): Observable<HousingLocation[]> {
+    const petition = this.httpClient.get<HousingLocation[]>(`${this.baseUrl}locations?city=${city}`);
+    return petition;
+  }
 }

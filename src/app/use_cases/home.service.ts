@@ -1,7 +1,7 @@
 import { Injectable, inject } from '@angular/core';
 import { HousingLocation, ISubmitApplication, IApplicationResponse } from '../domain/interfaces/interfaces';
 import { HousesDataSourceImpl } from '../infrastructure/datasource/houses.datasource.impl';
-import { Observable, map } from 'rxjs';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
@@ -20,5 +20,9 @@ export class HomeService {
 
   submitApplication(application: ISubmitApplication): Observable<IApplicationResponse> {
     return this.datasource.submitApplication(application);
+  }
+
+  getHousesByCity(city: string): Observable<HousingLocation[]> {
+    return this.datasource.getHousesByCity(city);
   }
 }

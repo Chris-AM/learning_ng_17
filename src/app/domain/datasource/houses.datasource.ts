@@ -5,4 +5,5 @@ export abstract class HousesDataSource {
   abstract getHouses(): Observable<HousingLocation[]>;
   abstract getHouse(id: number): Observable<HousingLocation>;
   abstract submitApplication(userData: ISubmitApplication): Observable<IApplicationResponse>;
+  abstract getHousesByCity(city: string): Observable<HousingLocation[]>;
 }
